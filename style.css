@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam&family=Kulim+Park:wght@300&display=swap');
+
+:root {
+    --primary-color: #5ce1e6;
+    --secondary-color: #00ffcc;
+    --primary-shadow: #32a8ac;
+    --secondary-shadow: #00a786;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kufam', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    /* font-family: 'Kulim Park', sans-serif; */
+}
+
+#container {
+    position: relative;
+    width: 100vw;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+#navbar {
+    display: flex;
+    margin: 30px 60px;
+    position: relative;
+}
+
+#navbar>ul {
+    display: flex;
+    padding: 20px;
+    position: absolute;
+    right: 0%;
+}
+
+#navbar>ul>a {
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 1.5vw;
+}
+
+#navbar>ul>a>li {
+    list-style: none;
+    font-weight: bolder;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 5vw;
+}
+
+#welcome-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 1.3vw;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    /* overflow-x: hidden; */
+}
+
+#circle::before {
+    content: "";
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    position: absolute;
+    right: -30px;
+    top: -25px;
+}
+
+#circle {
+
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: var(--secondary-shadow);
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    z-index: -1;
+}
+
+#title {
+    height: 200px;
+    position: absolute;
+    right: 180px;
+    top: 185px;
+
+}
+
+#title>span {
+    color: white;
+}
+
+#welcome-text {
+    font-weight: bold;
+    position: absolute;
+    font-size: 3vw;
+    left: 200px;
+    top: 100px;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+}
+
+#welcome-text span {
+    color: var(--primary-color);
+
+}
+
+#welcome-text button {
+    margin-top: 50px;
+    margin-right: 30px;
+    padding: 5%;
+    border-radius: 40px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1vw;
+
+    text-align: center;
+}
+
+#welcome-text button:first-of-type {
+    background-color: var(--secondary-color);
+    box-shadow: 4px 4px var(--secondary-shadow);
+}
+
+#welcome-text>button:last-of-type {
+    background-color: var(--primary-color);
+    box-shadow: 4px 4px var(--primary-shadow);
+    color: white;
+}
+
+#welcome-text button:first-of-type:hover {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s;
+    box-shadow: 4px 4px var(--primary-shadow);
+}
+
+#welcome-text>button:last-of-type:hover {
+    background: var(--secondary-color);
+    color: black;
+    cursor: pointer;
+    transition: all 0.4s;
+    box-shadow: 4px 4px var(--secondary-shadow);
+}
+
+#Academy-details {
+    width: 100%;
+    height: 15vw;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+
+}
+
+#Academy-details>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+#Academy-details div:nth-child(2) {
+    background: #19d1d8;
+}
+
+#Academy-details h3 {
+    font-weight: bold;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    margin: 12px 0;
+    font-size: 1.5vw;
+}
+
+#Academy-details p {
+    font-size: 1.2vw;
+}
+
+#Academy-details aside:nth-child(2) {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#facilities {
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#facilities ul {
+    margin: 40px;
+}
+
+#facilities>ul>h1 {
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    font-size: 2.7vw;
+}
+
+#facilities>ul>li {
+    list-style: none;
+    margin: 50px;
+    width: 100%;
+}
+
+#facilities>ul>button {
+    padding: 4% 6%;
+    margin-top: 30px;
+    margin-left: 50px;
+    border: none;
+    border-radius: 40px;
+    font-weight: bolder;
+    font-size: 1.1vw;
+    background: var(--primary-color);
+    box-shadow: 4px 4px var(--primary-shadow);
+    color: white;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+#facilities>ul>button:hover {
+    background-color: white;
+    color: var(--primary-shadow);
+}
+
+#choosing-reason {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+#choosing-reason div:nth-child(2)>h1 {
+    font-size: 2.7vw;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    margin: 20px 0;
+}
+
+#demo-class {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgb(228, 228, 228);
+}
+
+#demo-class>div {
+    width: 500px;
+}
+
+#demo-class>div>h1 {
+    font-size: 2.7vw;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    margin: 20px 0;
+}
+
+#demo-class>div>button {
+    padding: 4% 6%;
+    margin-top: 60px;
+    border: none;
+    border-radius: 40px;
+    font-weight: bolder;
+    font-size: 1.1vw;
+    background: var(--primary-color);
+    box-shadow: 4px 4px var(--primary-shadow);
+    color: white;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+#demo-class>div>button:hover {
+    background-color: var(--secondary-color);
+    color: black;
+    box-shadow: 4px 4px var(--secondary-shadow);
+}
+
+#explore-courses {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+#explore-courses>h1 {
+    font-size: 2.7vw;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    margin: 75px 60px;
+    /* position: absolute;
+    top: 50px;
+    left: 180px; */
+
+}
+
+#explore-courses>div {
+    text-align: left;
+    position: absolute;
+    top: 150px;
+    right: 0px;
+    font-size: 1.4vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#explore-courses>div span {
+    margin: 40px;
+    color: rgb(129, 129, 129);
+    cursor: pointer;
+}
+
+#explore-courses>div span:hover {
+    color: black;
+}
+
+#explore-courses button {
+    padding: 5%;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 40px;
+    font-size: 1.1vw;
+    box-shadow: 4px 4px var(--primary-shadow);
+    font-weight: bold;
+    color: white;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+#explore-courses>div button:hover {
+    background-color: var(--secondary-color);
+    color: black;
+    box-shadow: 4px 4px var(--secondary-shadow);
+}
+
+#testimonials {
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+#testimonials>h1 {
+    font-weight: bold;
+    font-size: 2.7vw;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    color: white;
+    position: absolute;
+    top: 60px;
+    left: 180px;
+}
+
+.swiper {
+    width: 80%;
+    height: 60%;
+    cursor: grab;
+}
+
+.swiper:active {
+    cursor: grabbing;
+}
+
+.swiper-slide {
+    background: rgb(196, 255, 255);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.message {
+    padding: 30px;
+    font-size: 1.5vw;
+    position: relative;
+
+}
+
+.message>h1 {
+    position: absolute;
+    bottom: -200px;
+    right: 23px;
+    font-size: 2vw;
+}
+
+footer {
+    width: 100%;
+    height: 70%;
+    background: black;
+    color: white;
+}
+
+.courses {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: large;
+}
+
+.courses div>h1 {
+    float: right;
+    margin: 50px;
+    color: white;
+    font-size: 2.7vw;
+}
+
+.courses div {
+    width: 50%;
+    color: var(--secondary-color);
+}
+
+.courses div,
+ul {
+    margin: 80px;
+    font-size: 1.4vw;
+}
+
+.courses div>h1 {
+    font-size: 2.7vw;
+}
+
+.courses li {
+    list-style: none;
+    padding: 10px;
+    font-size: 1.3vw;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3vw;
+    padding: 0 50px;
+    background-color: black;
+}
+
+.social-imgs {
+    display: flex;
+    width: 200px;
+    justify-content: space-evenly;
+}
+.social-imgs img{
+    width: 12%;
+}
+p {
+    font-size: 1.2vw;
+}
+
+@media only screen and (max-width:1194px) {
+    #circle {
+        width: 500px;
+        height: 500px;
+
+    }
+
+    #circle::before {
+        width: 500px;
+        height: 500px;
+
+    }
+
+    #title {
+        position: absolute;
+        right: 70px;
+        top: 130px;
+    }
+
+    #facilities>img {
+        width: 300px !important;
+    }
+
+    #choosing-reason img {
+        width: 300px !important;
+    }
+
+    #demo-class>img {
+        width: 300px !important;
+    }
+
+}
+
+@media only screen and (max-width:860px) {
+    #navbar>ul {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    #welcome-text {
+        position: absolute;
+        left: 70px;
+    }
+
+    #title {
+        font-size: 2.8vw;
+    }
+
+    #logo {
+        width: 65px;
+    }
+
+    #demo-class>div {
+        transform: translate(100px, 0px);
+    }
+
+}
+
+@media only screen and (max-width:680px) {
+    #circle {
+        width: 400px;
+        height: 400px;
+
+    }
+
+    #circle::before {
+        width: 400px;
+        height: 400px;
+    }
+
+    #title {
+        position: absolute;
+        right: 40px;
+        top: 60px;
+    }
+}
+
+@media only screen and (max-width:530px){
+    #title{
+        top: 415px;
+    }
+    #circle{
+        top: 245px;
+    }
+    #welcome-text{
+        left: 100px;
+        top: 25px;
+    }
+    #welcome-text div{
+        font-size: 3.7vw;
+    }
+    #facilities>img {
+        width: 130px !important;
+    }
+
+    #choosing-reason img {
+        width: 130px !important;
+    }
+
+    #demo-class>img {
+        width: 130px !important;
+    }
+}
